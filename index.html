@@ -1,45 +1,54 @@
 ﻿<!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Zilyanus's Website">
-    <title>Zilyanus's Website</title>
-
-    <link rel="icon" type="image/x-icon" href="favicon.ico?">
-
-    <style>
-        img {
-            width: 100%;
-        }
-
-        h1 {
-            font-size: 40px;
-        }
-
-        p {
-            font-size: 20px;
-        }
-    </style>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Title</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+<header>
+    <video autoplay muted loop id="bg-video">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+        <h1>Game Title</h1>
+        <p>Experience the Adventure</p>
+        <a href="#trailer" class="btn">Watch Trailer</a>
+    </div>
+</header>
 
-    <body style="background-color:burlywood;">
+<section id="trailer">
+    <h2>Game Trailer</h2>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+</section>
 
-        <div style="text-align: center;">
-            <img src="Foto.png" alt="Taha's Foto" style="width: 397px; height: 280.7px;">
-            <h1>Zilyanus's Website</h1>
-            <hr />
-            <p>Hi, I'm a beginner game developer.</p>
+<section id="screenshots">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="screenshot1.jpg" alt="Screenshot 1">
+        <img src="screenshot2.jpg" alt="Screenshot 2">
+        <img src="screenshot3.jpg" alt="Screenshot 3">
+    </div>
+</section>
 
-            <a href="https://zilyanus.itch.io/" target="_blank"><img src="itch.png" alt="itch" style="width: 26.2px; height: 23.5px;"></a>
+<section id="news">
+    <h2>Latest News</h2>
+    <article>
+        <h3>Game Release Date Announced</h3>
+        <p>We are excited to announce the official release date of our game! Stay tuned for more updates.</p>
+    </article>
+</section>
 
-            <a href="https://github.com/Zilyanus" target="_blank"><img src="git.png" alt="itch" style="width: 26.2px; height: 23.5px;"></a>
+<footer>
+    <p>&copy; 2025 Game Studio. All rights reserved.</p>
+    <div class="social-links">
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+    </div>
+</footer>
 
-            <a href="https://www.linkedin.com/in/taha-t%C3%BCrko%C4%9Flu-337605211/" target="_blank"><img src="LinkedIn.png" alt="itch" style="width: 26.2px; height: 23.5px;"></a>
-
-        </div>      
-
-    </body>
-
+<script src="script.js"></script>
+</body>
 </html>
