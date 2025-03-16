@@ -29,4 +29,31 @@
 		section.style.transform = "translateY(50px)";
 		observer.observe(section);
 	});
+
+	// Mail list submission
+	const form = document.getElementById("mail-list-form");
+	if (form) {
+		form.addEventListener("submit", function(e) {
+			e.preventDefault();
+			const email = document.getElementById("email").value;
+			if (email) {
+				fetch("https://v0.ai/api/subscribe", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({ email })
+				})
+					.then(response => response.json())
+					.then(data => {
+						alert("Thank you for subscribing!");
+						form.reset();
+					})
+					.catch(error => {
+						console.error("Error:", error);
+						alert("Subscription failed. Please try again.");
+					});
+			}
+		});
+	}
 });
